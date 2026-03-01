@@ -37,7 +37,7 @@ const CartSidebar = () => {
                     {item.product.name}
                   </h3>
                   <p className="text-[10px] text-muted-foreground mt-1">Size: {item.size}</p>
-                  <p className="text-xs font-medium text-foreground mt-1">£{item.product.price.toFixed(2)}</p>
+                  <p className="text-xs font-medium text-foreground mt-1">₦{item.product.price.toFixed(2)}</p>
                   <div className="flex items-center gap-3 mt-2">
                     <button onClick={() => updateQuantity(item.product.id, item.size, item.quantity - 1)} className="text-muted-foreground hover:text-foreground">
                       <Minus size={14} />
@@ -60,7 +60,7 @@ const CartSidebar = () => {
           <div className="p-6 border-t border-border space-y-4">
             <div className="flex justify-between text-xs font-semibold text-foreground">
               <span>Total</span>
-              <span>£{totalPrice.toFixed(2)}</span>
+              <span>₦{totalPrice.toFixed(2)}</span>
             </div>
             <Link
               to="/checkout"

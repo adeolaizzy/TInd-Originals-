@@ -10,14 +10,15 @@ import Sustainability from "./pages/Sustainability";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Checkout from "./pages/Checkout";
 import ProductDetail from "./pages/ProductDetail";
+import Signup from "./pages/Signup";
 
 import NotFound from "./pages/NotFound";
 
 
-const queryClient = new QueryClient();
+import { client } from "@/services/api/client";
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
+  <QueryClientProvider client={client}>
     <TooltipProvider>
       <CartProvider>
         <Toaster />
@@ -30,7 +31,7 @@ const App = () => (
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/product/:id" element={<ProductDetail />} />
-
+            <Route path="/signup" element={<Signup />} />
 
             <Route path="*" element={<NotFound />} />
           </Routes>

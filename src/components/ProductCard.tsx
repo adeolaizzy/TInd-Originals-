@@ -23,7 +23,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
         {product.name}
       </h3>
       <p className="text-sm font-medium text-foreground">
-        £{product.price.toFixed(2)}
+        ₦{product.price.toFixed(2)}
       </p>
     </Link>
   );

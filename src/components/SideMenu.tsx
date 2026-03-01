@@ -5,7 +5,7 @@ const SideMenu = () => {
 
     const menuItems = [
         { label: "PRODUCTS", path: "/shop" },
-        { label: "SIGN UP", path: "#" },
+        { label: "SIGN UP", path: "/signup" },
         { label: "SIZE GUIDE", path: "#" },
         { label: "SUSTAINABILITY", path: "/sustainability" },
         { label: "FOUNDATION", path: "#" },
@@ -22,7 +22,7 @@ const SideMenu = () => {
                     <Link
                         key={item.label}
                         to={item.path}
-                        className={`text-xs md:text-sm font-black tracking-wider uppercase transition-all hover:underline underline-offset-4 decoration-2 ${location.pathname === item.path ? "opacity-50 line-through decoration-white/50" : "text-white"
+                        className={`text-xs md:text-sm font-black tracking-wider uppercase transition-all hover:underline underline-offset-4 decoration-2 ${location.pathname === item.path ? "text-white/40" : "text-white"
                             }`}
                     >
                         {item.label}
