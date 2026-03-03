@@ -38,7 +38,7 @@ const Checkout = () => {
         reference: (new Date()).getTime().toString(),
         email: formData.email,
         amount: Math.round(totalPrice * 100), // Amount in Kobo
-        publicKey: 'pk_test_378ec2c883aeb10eb4bf3c175c4d764535a3e714',
+        publicKey: 'pk_live_c3bdbcd59f49e3ee0e4a6e218e98fbaa1a4e7f90',
         currency: 'NGN'
     };
 

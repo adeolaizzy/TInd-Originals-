@@ -16,7 +16,7 @@ const SideMenu = () => {
     ];
 
     return (
-        <div className="fixed bottom-6 left-6 md:bottom-10 md:left-10 z-[100] flex flex-col items-start gap-1">
+        <div className="hidden md:flex fixed bottom-6 left-6 md:bottom-10 md:left-10 z-[100] flex-col items-start gap-1">
             {menuItems.map((item) => (
                 item.path !== "#" ? (
                     <Link

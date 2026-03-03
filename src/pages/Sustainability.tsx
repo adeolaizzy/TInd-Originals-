@@ -1,8 +1,7 @@
-import { Link } from "react-router-dom";
 import { useCart } from "@/lib/cart";
 import SideMenu from "@/components/SideMenu";
 import CartSidebar from "@/components/CartSidebar";
-import Logo from "@/components/Logo";
+import Navbar from "@/components/Navbar";
 import {
     Accordion,
     AccordionContent,
@@ -12,25 +11,9 @@ import {
 
 
 const Sustainability = () => {
-    const { totalItems, setIsOpen } = useCart();
-
     return (
         <div className="min-h-screen w-full bg-[#111111] text-white font-sans selection:bg-white selection:text-black pb-20">
-            {/* Header */}
-            <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-6 md:p-10 bg-transparent">
-                <Logo className="w-28 md:w-36" />
-
-
-                <button
-                    onClick={() => setIsOpen(true)}
-                    className="flex items-center gap-1 text-sm md:text-base font-black tracking-widest uppercase hover:opacity-70 transition-opacity"
-                >
-                    BAG
-                    <span className="flex items-center justify-center bg-white text-black rounded-full w-5 h-5 text-[10px] font-bold ml-1">
-                        {totalItems}
-                    </span>
-                </button>
-            </header>
+            <Navbar />
 
             {/* Content */}
             <main className="max-w-4xl mx-auto pt-32 px-6 md:pt-40">

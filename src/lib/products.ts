@@ -1,18 +1,18 @@
-import pufferJacket from "@/assets/products/puffer-jacket.png";
-import techJacket from "@/assets/products/tech-jacket.png";
-import pinkHoodie from "@/assets/products/pink-hoodie.png";
-import blackHoodie from "@/assets/products/black-hoodie.png";
-import cargoPants from "@/assets/products/cargo-pants.png";
-import creamTee from "@/assets/products/cream-tee.png";
-import greySweatshirt from "@/assets/products/grey-sweatshirt.png";
-import brownTrackpants from "@/assets/products/brown-trackpants.png";
-import navyVest from "@/assets/products/navy-vest.png";
+import tindBabyTee from "@/assets/products/tind-baby-tee.png";
+import tindHoodieBack from "@/assets/products/tind-hoodie-backview.png";
+import tindHoodieFront from "@/assets/products/tind-hoodie-front-view.png";
+import tindPantsBack from "@/assets/products/tind-pants-backview.png";
+import tindPantsFront from "@/assets/products/tind-pants-front-viewe.png";
+import tindSleevelessTeeBack from "@/assets/products/tind-sleeveless-tee-back-view.png";
+import tindSleevelessTee from "@/assets/products/tind-sleeveless-tee.png";
+import tindTankTop from "@/assets/products/tind-tank-top.png";
 
 export interface Product {
   id: string;
   name: string;
   price: number;
   image: string;
+  images: string[];
   category: string;
   sizes: string[];
   description: string;
@@ -21,84 +21,83 @@ export interface Product {
 export const products: Product[] = [
   {
     id: "1",
-    name: "Heat-Reactive Star Camo Puffer Jacket",
-    price: 150.0,
-    image: pufferJacket,
-    category: "Jackets",
+    name: "Tind Baby Tee",
+    price: 50.0,
+    image: tindBabyTee,
+    images: [tindBabyTee],
+    category: "Tees",
     sizes: ["S", "M", "L", "XL"],
-    description: "Premium puffer jacket featuring our signature star camouflage pattern with heat-reactive technology. Sustainable materials, oversized fit.",
+    description: "Soft baby tee for everyday comfort.",
   },
   {
     id: "2",
-    name: "Star Camo Tech Jacket",
-    price: 120.0,
-    image: techJacket,
-    category: "Jackets",
+    name: "Tind Hoodie (Back View)",
+    price: 80.0,
+    image: tindHoodieBack,
+    images: [tindHoodieBack, tindHoodieFront],
+    category: "Hoodies",
     sizes: ["S", "M", "L", "XL"],
-    description: "Lightweight technical jacket with pink camouflage print. Water-resistant, breathable fabric with adjustable hood.",
+    description: "Classic hoodie with Tind branding.",
   },
   {
     id: "3",
-    name: "Star Logo Zip-Up Hoodie",
-    price: 85.0,
-    image: pinkHoodie,
+    name: "Tind Hoodie (Front View)",
+    price: 80.0,
+    image: tindHoodieFront,
+    images: [tindHoodieFront, tindHoodieBack],
     category: "Hoodies",
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    description: "Oversized zip-up hoodie in soft pink with embroidered star logo. 100% organic cotton, brushed fleece interior.",
+    sizes: ["S", "M", "L", "XL"],
+    description: "Classic hoodie front design.",
   },
   {
     id: "4",
-    name: "Graphic Logo Pullover Hoodie",
-    price: 90.0,
-    image: blackHoodie,
-    category: "Hoodies",
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    description: "Black oversized pullover hoodie with signature graphic print. Heavy-weight organic cotton, kangaroo pocket.",
+    name: "Tind Pants (Back View)",
+    price: 70.0,
+    image: tindPantsBack,
+    images: [tindPantsBack, tindPantsFront],
+    category: "Pants",
+    sizes: ["S", "M", "L", "XL"],
+    description: "Comfortable pants, back view.",
   },
   {
     id: "5",
-    name: "Utility Cargo Joggers",
-    price: 75.0,
-    image: cargoPants,
-    category: "Bottoms",
+    name: "Tind Pants (Front View)",
+    price: 70.0,
+    image: tindPantsFront,
+    images: [tindPantsFront, tindPantsBack],
+    category: "Pants",
     sizes: ["S", "M", "L", "XL"],
-    description: "Military-inspired cargo joggers in olive green. Multiple utility pockets, elasticated cuffs, drawstring waist.",
+    description: "Comfortable pants, front view.",
   },
   {
     id: "6",
-    name: "Abstract Print Oversized Tee",
-    price: 45.0,
-    image: creamTee,
-    category: "T-Shirts",
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    description: "Cream oversized tee with abstract graphic print. 100% organic cotton, drop shoulder fit.",
+    name: "Tind Sleeveless Tee (Back View)",
+    price: 40.0,
+    image: tindSleevelessTeeBack,
+    images: [tindSleevelessTeeBack, tindSleevelessTee],
+    category: "Tees",
+    sizes: ["S", "M", "L", "XL"],
+    description: "Sleeveless tee, back view.",
   },
   {
     id: "7",
-    name: "Star Logo Crewneck Sweatshirt",
-    price: 70.0,
-    image: greySweatshirt,
-    category: "Hoodies",
+    name: "Tind Sleeveless Tee",
+    price: 40.0,
+    image: tindSleevelessTee,
+    images: [tindSleevelessTee, tindSleevelessTeeBack],
+    category: "Tees",
     sizes: ["S", "M", "L", "XL"],
-    description: "Grey oversized crewneck with minimal star logo embroidery. Heavyweight french terry, relaxed fit.",
+    description: "Sleeveless tee, front view.",
   },
   {
     id: "8",
-    name: "Essential Trackpants",
-    price: 65.0,
-    image: brownTrackpants,
-    category: "Bottoms",
+    name: "Tind Tank Top",
+    price: 35.0,
+    image: tindTankTop,
+    images: [tindTankTop],
+    category: "Tees",
     sizes: ["S", "M", "L", "XL"],
-    description: "Earth-tone trackpants with drawstring waist and tapered leg. Soft brushed cotton, embroidered logo.",
-  },
-  {
-    id: "9",
-    name: "Puffer Vest Gilet",
-    price: 110.0,
-    image: navyVest,
-    category: "Jackets",
-    sizes: ["S", "M", "L", "XL"],
-    description: "Navy puffer vest with sustainable recycled fill. Zip front, stand collar, side pockets.",
+    description: "Classic tank top.",
   },
 ];
 

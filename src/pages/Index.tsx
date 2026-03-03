@@ -1,15 +1,13 @@
 import { Link } from "react-router-dom";
-import { useCart } from "@/lib/cart";
 import CartSidebar from "@/components/CartSidebar";
 import SideMenu from "@/components/SideMenu";
-import Logo from "@/components/Logo";
-
+import Navbar from "@/components/Navbar";
 
 const Index = () => {
-  const { totalItems, setIsOpen } = useCart();
-
   return (
     <div className="relative h-screen w-full overflow-hidden bg-black text-white font-sans selection:bg-white selection:text-black">
+      <Navbar />
+
       {/* Background Video */}
       <video
         autoPlay
@@ -28,21 +26,6 @@ const Index = () => {
 
       {/* Overlay for better text legibility */}
       <div className="absolute inset-0 bg-black/20" />
-
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-6 md:p-10">
-        <Logo className="w-32 md:w-44" />
-
-        <button
-          onClick={() => setIsOpen(true)}
-          className="flex items-center gap-1 text-sm md:text-base font-black tracking-widest uppercase hover:opacity-70 transition-opacity"
-        >
-          BAG
-          <span className="flex items-center justify-center bg-white text-black rounded-full w-5 h-5 text-[10px] font-bold ml-1">
-            {totalItems}
-          </span>
-        </button>
-      </header>
 
       {/* Center Hero Button */}
       <div className="absolute inset-0 flex items-center justify-center p-6">
@@ -63,5 +46,3 @@ const Index = () => {
 };
 
 export default Index;
-
-

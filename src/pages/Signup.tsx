@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { useCart } from "@/lib/cart";
 import { ArrowRight, Loader2 } from "lucide-react";
-import Logo from "@/components/Logo";
 import SideMenu from "@/components/SideMenu";
 import CartSidebar from "@/components/CartSidebar";
+import Navbar from "@/components/Navbar";
 import { useSubscribeToNewsletter } from "@/services/newsletter.service";
 import { toast } from "@/components/ui/sonner";
 
 const Signup = () => {
-    const { totalItems, setIsOpen } = useCart();
     const [email, setEmail] = useState("");
 
     const { mutate: subscribe, isPending } = useSubscribeToNewsletter({
@@ -42,22 +40,7 @@ const Signup = () => {
 
     return (
         <div className="relative min-h-screen w-full overflow-hidden bg-[#0A0A0A] text-white font-sans selection:bg-white selection:text-black">
-            {/* Header */}
-            <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between p-6 md:p-10 pointer-events-none">
-                <div className="pointer-events-auto">
-                    <Logo className="w-32 md:w-36" />
-                </div>
-
-                <button
-                    onClick={() => setIsOpen(true)}
-                    className="pointer-events-auto flex items-center gap-1 text-sm md:text-base font-black tracking-widest uppercase hover:opacity-70 transition-opacity"
-                >
-                    BAG
-                    <span className="flex items-center justify-center bg-white text-black rounded-full w-5 h-5 text-[10px] font-bold ml-1">
-                        {totalItems}
-                    </span>
-                </button>
-            </header>
+            <Navbar />
 
             {/* Main Content */}
             <main className="flex flex-col items-center justify-center min-h-screen p-6 text-center animate-in fade-in duration-1000">
