@@ -21,23 +21,22 @@ const Navbar = () => {
   const menuItems = [
     { label: "PRODUCTS", path: "/shop" },
     { label: "SIGN UP", path: "/signup" },
-    { label: "SIZE GUIDE", path: "#" },
     { label: "SUSTAINABILITY", path: "/sustainability" },
     { label: "FOUNDATION", path: "#" },
     { label: "TERMS", path: "#" },
     { label: "PRIVACY POLICY", path: "/privacy" },
-    { label: "COOKIE POLICY", path: "#" },
+    { label: "COOKIE POLICY", path: "/cookies" },
   ];
 
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 right-0 z-[110] flex items-center justify-between px-6 md:px-10 transition-all duration-300 ${isScrolled ? "py-4 bg-black/80 backdrop-blur-md border-b border-white/5" : "py-8 bg-transparent"
+        className={`fixed top-0 left-0 right-0 z-[110] flex items-center justify-between px-6 md:px-10 transition-all duration-300 pointer-events-none ${isScrolled ? "py-4 bg-black/80 backdrop-blur-md border-b border-white/5" : "py-8 bg-transparent"
           }`}
       >
-        <Logo className="w-24 md:w-36" />
+        <Logo className="w-24 md:w-36 pointer-events-auto" />
 
-        <div className="flex items-center gap-6">
+        <div className="flex items-center gap-6 pointer-events-auto">
           <button
             onClick={() => setIsCartOpen(true)}
             className="flex items-center gap-1 text-[10px] md:text-xs font-black tracking-widest uppercase text-white hover:opacity-70 transition-opacity"

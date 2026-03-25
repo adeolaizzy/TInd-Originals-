@@ -39,10 +39,10 @@ const ProductDetail = () => {
       <CartSidebar />
       <SideMenu />
 
-      <main className="pt-24 px-6 pb-16">
+      <main className="pt-32 md:pt-40 px-6 pb-16">
         <Link
-          to="/"
-          className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-10"
+          to="/shop"
+          className="relative z-10 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-10"
         >
           <ArrowLeft size={16} />
           Back to Shop
@@ -115,8 +115,11 @@ const ProductDetail = () => {
             <h1 className="text-xs font-semibold tracking-[0.2em] uppercase text-foreground mb-4">
               {product.name}
             </h1>
-            <p className="text-2xl font-bold text-foreground mb-8">
+            <p className="text-2xl font-bold text-foreground mb-2">
               ₦{product.price.toFixed(2)}
+            </p>
+            <p className="text-lg text-muted-foreground mb-8">
+              £{(product.price / 2000).toFixed(2)}
             </p>
             <p className="text-sm text-muted-foreground leading-relaxed mb-8">
               {product.description}
@@ -132,8 +135,8 @@ const ProductDetail = () => {
                     key={size}
                     onClick={() => setSelectedSize(size)}
                     className={`w-12 h-12 text-xs font-semibold tracking-wider transition-colors ${selectedSize === size
-                        ? "bg-foreground text-background"
-                        : "border border-border text-foreground hover:bg-card"
+                      ? "bg-foreground text-background"
+                      : "border border-border text-foreground hover:bg-card"
                       }`}
                   >
                     {size}

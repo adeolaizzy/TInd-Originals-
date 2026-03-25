@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => ({
     },
     proxy: {
       "/api": {
-        target: "https://d65d-102-88-114-73.ngrok-free.app",
+        target: "https://api-tind-originals.onrender.com",
         changeOrigin: true,
         secure: false,
       },

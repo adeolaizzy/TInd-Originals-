@@ -6,12 +6,11 @@ const SideMenu = () => {
     const menuItems = [
         { label: "PRODUCTS", path: "/shop" },
         { label: "SIGN UP", path: "/signup" },
-        { label: "SIZE GUIDE", path: "#" },
         { label: "SUSTAINABILITY", path: "/sustainability" },
         { label: "FOUNDATION", path: "#" },
         { label: "TERMS", path: "#" },
         { label: "PRIVACY POLICY", path: "/privacy" },
-        { label: "COOKIE POLICY", path: "#" },
+        { label: "COOKIE POLICY", path: "/cookies" },
 
     ];
 

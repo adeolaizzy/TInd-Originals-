@@ -2,7 +2,7 @@ import axios, { AxiosInstance, InternalAxiosRequestConfig } from 'axios';
 
 import handleResponseError from './handleResponseError';
 
-let baseURL = '';
+let baseURL = 'https://api-tind-originals.onrender.com';
 
 if (import.meta.env.NEXT_PUBLIC_ENV === 'staging') {
   baseURL = import.meta.env.NEXT_PUBLIC_STG_URL ?? '';

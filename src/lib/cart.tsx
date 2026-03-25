@@ -16,6 +16,8 @@ interface CartContextType {
   totalPrice: number;
   isOpen: boolean;
   setIsOpen: (open: boolean) => void;
+  isNewsletterOpen: boolean;
+  setIsNewsletterOpen: (open: boolean) => void;
   clearCart: () => void;
 }
 
@@ -24,8 +26,18 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
   const [isOpen, setIsOpen] = useState(false);
+  const [isNewsletterOpen, setIsNewsletterOpen] = useState(false);
 
   const addItem = (product: Product, size: string) => {
+    // Check if user has already seen the newsletter popup
+    const hasSeenNewsletter = localStorage.getItem("newsletter_seen") === "true";
+    const isSubscribed = localStorage.getItem("newsletter_subscribed") === "true";
+
+    if (!hasSeenNewsletter && !isSubscribed) {
+      setIsNewsletterOpen(true);
+      localStorage.setItem("newsletter_seen", "true");
+    }
+
     setItems((prev) => {
       const existing = prev.find(
         (item) => item.product.id === product.id && item.size === size
@@ -76,7 +88,19 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
   return (
     <CartContext.Provider
-      value={{ items, addItem, removeItem, updateQuantity, totalItems, totalPrice, isOpen, setIsOpen, clearCart }}
+      value={{ 
+        items, 
+        addItem, 
+        removeItem, 
+        updateQuantity, 
+        totalItems, 
+        totalPrice, 
+        isOpen, 
+        setIsOpen, 
+        isNewsletterOpen, 
+        setIsNewsletterOpen, 
+        clearCart 
+      }}
     >
       {children}
     </CartContext.Provider>

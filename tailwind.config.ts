@@ -87,6 +87,10 @@ export default {
           from: { opacity: "0" },
           to: { opacity: "1" },
         },
+        "fade-in-out": {
+          "0%, 100%": { opacity: "0.3" },
+          "50%": { opacity: "1" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -94,6 +98,7 @@ export default {
         "slide-in-right": "slide-in-right 0.3s ease-out",
         "slide-out-right": "slide-out-right 0.3s ease-out",
         "fade-in": "fade-in 0.4s ease-out",
+        "fade-in-out": "fade-in-out 2s ease-in-out infinite",
       },
     },
   },

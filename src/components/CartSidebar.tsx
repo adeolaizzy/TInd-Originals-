@@ -10,10 +10,10 @@ const CartSidebar = () => {
   return (
     <>
       <div
-        className="fixed inset-0 z-50 bg-background/60 backdrop-blur-sm animate-fade-in"
+        className="fixed inset-0 z-[130] bg-background/60 backdrop-blur-sm animate-fade-in"
         onClick={() => setIsOpen(false)}
       />
-      <div className="fixed right-0 top-0 bottom-0 z-50 w-full max-w-md bg-background border-l border-border animate-slide-in-right flex flex-col uppercase font-black">
+      <div className="fixed right-0 top-0 bottom-0 z-[130] w-full max-w-md bg-background border-l border-border animate-slide-in-right flex flex-col uppercase font-black">
         <div className="flex items-center justify-between p-6 border-b border-border">
           <h2 className="text-sm font-semibold tracking-[0.2em] uppercase text-foreground">
             Your Bag ({items.reduce((s, i) => s + i.quantity, 0)})

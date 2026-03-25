@@ -166,25 +166,7 @@ const Checkout = () => {
                     <main className="space-y-8 animate-in fade-in duration-700">
                         {step === "information" && (
                             <>
-                                <section className="mb-10">
-                                    <p className="text-center text-[10px] uppercase tracking-widest text-white/40 mb-4 font-bold">Express checkout</p>
-                                    <div className="grid grid-cols-2 gap-3">
-                                        <button className="bg-[#5a31f4] hover:bg-[#4824d6] transition-all h-12 rounded flex items-center justify-center font-black italic text-lg tracking-tighter">
-                                            shop<span className="opacity-70 ml-1 font-black">pay</span>
-                                        </button>
-                                        <button className="bg-black border border-white/10 hover:bg-white/5 transition-all h-12 rounded flex items-center justify-center">
-                                            <span className="flex items-center gap-1 font-black uppercase text-xs tracking-widest">
-                                                <span className="text-white text-base">G</span> Pay
-                                            </span>
-                                        </button>
-                                    </div>
-                                    <div className="relative mt-8 text-center">
-                                        <div className="absolute inset-0 flex items-center">
-                                            <div className="w-full border-t border-white/10"></div>
-                                        </div>
-                                        <span className="relative px-4 bg-[#0a0a0a] text-[10px] uppercase tracking-widest text-white/40 font-bold font-black">OR</span>
-                                    </div>
-                                </section>
+
 
                                 <section className="space-y-4">
                                     <div className="flex justify-between items-end">
